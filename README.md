@@ -28,17 +28,31 @@ Demoapp runs as a Docker container in multiple environments. The typical workflo
 1. Run the Docker container.
 
    ```
-   docker run --rm --name demoapp --env PORT=8080 --env APP_NAME=foo --env FLASK_ENV=development --publish 8080:8080 mbigras/demoapp
+   docker run \
+           --rm \
+           --name demoapp \
+           --env PORT=8080 \
+           --env APP_NAME=foo \
+           --env FLASK_ENV=development \
+           --publish 8080:8080 \
+           mbigras/demoapp
    ```
 
    The output should look like this:
 
    ```
-   $ docker run --rm --name demoapp --env PORT=8080 --env APP_NAME=foo --env FLASK_ENV=development --publish 8080:8080 mbigras/demoapp
-   [2021-11-15 06:22:57 +0000] [1] [INFO] Starting gunicorn 20.1.0
-   [2021-11-15 06:22:57 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080 (1)
-   [2021-11-15 06:22:57 +0000] [1] [INFO] Using worker: sync
-   [2021-11-15 06:22:57 +0000] [9] [INFO] Booting worker with pid: 9
+   $ docker run \
+            --rm \
+            --name demoapp \
+            --env PORT=8080 \
+            --env APP_NAME=foo \
+            --env FLASK_ENV=development \
+            --publish 8080:8080 \
+            mbigras/demoapp
+   [2021-11-15 06:31:12 +0000] [1] [INFO] Starting gunicorn 20.1.0
+   [2021-11-15 06:31:12 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080 (1)
+   [2021-11-15 06:31:12 +0000] [1] [INFO] Using worker: sync
+   [2021-11-15 06:31:12 +0000] [9] [INFO] Booting worker with pid: 9
    ```
 
 1. Open a new terminal.
@@ -60,7 +74,7 @@ Demoapp runs as a Docker container in multiple environments. The typical workflo
    }
    ```
 
-1. Shut down demoapp.
+1. Shut down Demoapp.
 
    * Press the ctrl-c keyboard shortcut
    * The demoapp Docker container should be removed because you ran the container with the `--rm` option.

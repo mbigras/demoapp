@@ -82,5 +82,4 @@ Demoapp runs as a Docker container in multiple environments. The typical workflo
 
 1. Shut down Demoapp.
 
-   * Press the ctrl-c keyboard shortcut
-   * The demoapp Docker container should be removed because you ran the container with the `--rm` option.
+   Navigate back to the terminal running demoapp and press the ctrl-c keyboard sequence. The demoapp Docker container should be removed because you ran the container with the `--rm` option.

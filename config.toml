@@ -1,0 +1,6 @@
+# This file configures your application according to a process explained at:
+# https://flask.palletsprojects.com/en/2.0.x/api/#flask.Config.from_file
+
+# This is the default configuration file.
+# Load a different configuration file by setting the CONFIG_FILE environment variable.
+JSONIFY_PRETTYPRINT_REGULAR = true

@@ -38,6 +38,10 @@ Demoapp runs as a Docker container in multiple environments. The typical workflo
            mbigras/demoapp
    ```
 
+   * `PORT` configures the port that Demoapp listens on. The default is 8080.
+   * `APP_NAME` configures the name returned. The default is app.
+   * `FLASK_ENV` configures the environment. Valid choices are development, test, and production. The default is production.
+
    The output should look like this:
 
    ```
@@ -73,6 +77,8 @@ Demoapp runs as a Docker container in multiple environments. The typical workflo
      "version": "0.1.0"
    }
    ```
+
+   Notice the envionment, name, and version are returned. Version comes from the VERSION.txt file.
 
 1. Shut down Demoapp.
 

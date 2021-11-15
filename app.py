@@ -4,13 +4,16 @@ import os
 import flask
 import toml
 
-
+# The APP_NAME environment variable sets your app's name.
+# Demoapp is for demonstrations where you often run multiple containers
+# that have different names. The default name is app.
 app = flask.Flask(os.environ.get("APP_NAME", __name__))
 
 # The FLASK_ENV environment variable sets your app's environment.
 # The app.config["ENV"] dictionary entry stores the value of your app's environment.
 # Refer to https://flask.palletsprojects.com/en/2.0.x/config/#ENV for more details.
 
+# The VERSION.txt file sets your app's version.
 with open("VERSION.txt") as fh:
     app.config["VERSION"] = fh.read().strip()
 
